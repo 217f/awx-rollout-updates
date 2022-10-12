@@ -1,4 +1,4 @@
-# Filename: helloworld.ps1
+# Filename: install.ps1
 $args[0] >> C:\test_updates.txt
 Write-Host
 Write-Host 'Hello World!'
