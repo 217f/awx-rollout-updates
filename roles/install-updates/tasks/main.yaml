@@ -1,5 +1,5 @@
 ---
 # This role handles installing updates
 
-- name: Run powershell script
+- name: Run powershell script with parameter {{ps_param}}
   script: files/install.ps1 "{{ps_param}}"
