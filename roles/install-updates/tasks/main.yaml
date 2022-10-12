@@ -4,13 +4,13 @@
 - name: Run powershell script with parameter "{{ps_param}}"
   script: files/install.ps1 "{{ps_param}}"
 
-- name: Sending an e-mail using Gmail SMTP servers
+- name: Sending status mail
   community.general.mail:
     host: 172.22.205.92
     port: 1025
     username: mh@example.com
     password: mysecret
     to: Markus Hosiner <mh@example.com>
-    subject: Ansible-report
-    body: System {{ ansible_hostname }} has been successfully provisioned.
+    subject: "[AWX:TPL_ROLLOUT_UPDATE] {{ansible_host}}"
+    body: System {{ ansible_hostname }} has been successfully updated.
   delegate_to: localhost
