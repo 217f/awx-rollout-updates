@@ -3,3 +3,14 @@
 
 - name: Run powershell script with parameter "{{ps_param}}"
   script: files/install.ps1 "{{ps_param}}"
+
+- name: Sending an e-mail using Gmail SMTP servers
+  community.general.mail:
+    host: http://172.22.205.92:8025/
+    port: 1025
+    username: mh@example.com
+    password: mysecret
+    to: Markus Hosiner <mh@example.com>
+    subject: Ansible-report
+    body: System {{ ansible_hostname }} has been successfully provisioned.
+  delegate_to: localhost
