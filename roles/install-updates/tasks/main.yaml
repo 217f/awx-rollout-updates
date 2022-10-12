@@ -2,4 +2,4 @@
 # This role handles installing updates
 
 - name: Run powershell script
-  script: files/install.ps1 {{PS_PARAM}}
+  script: files/install.ps1 "{{PS_PARAM}}"
