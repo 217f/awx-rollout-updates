@@ -3,7 +3,7 @@
 
 - name: Send magic Wake-On-Lan packet to turn on individual systems
   wakeonlan:
-    mac: '{{ mac }}'
+    mac: '00:00:5E:00:53:66'
     broadcast: 192.168.0.255
   delegate_to: localhost
 
