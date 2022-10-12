@@ -3,9 +3,13 @@
 
 # Apply common configuration to all hosts
 - hosts: all
-
   gather_facts: no
-
   roles:
   - common
+
+- hosts: all
+  roles:
+  - install-updates
+  tags:
+  - install-updates
   

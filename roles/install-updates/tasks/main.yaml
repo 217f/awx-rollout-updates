@@ -1,0 +1,5 @@
+---
+# This role handles installing updates
+
+- name: Run powershell script
+  script: files/install.ps1 TESTPARAM
