@@ -7,8 +7,9 @@
     broadcast: 192.168.0.255
   delegate_to: localhost
 
-- name: Wait 600 seconds for system to become reachable
+- name: Wait 60 seconds for system to become reachable
   wait_for_connection:
+    timeout: 60
 
 - name: Gather facts for first time
   setup:
