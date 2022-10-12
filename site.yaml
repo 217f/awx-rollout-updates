@@ -5,7 +5,7 @@
 - hosts: all
   gather_facts: no
   roles:
-  - common
+  - wol-host
 
 - hosts: all
   gather_facts: no

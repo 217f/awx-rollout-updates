@@ -1,0 +1,3 @@
+- name: wol-host
+  src: https://github.com/217f/awx-wol-host
+  version: main
