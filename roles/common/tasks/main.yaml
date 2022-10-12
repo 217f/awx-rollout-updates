@@ -1,7 +1,7 @@
 ---
 # This role contains common plays that will run on all nodes.
 
-- name: Send a magic Wake-on-LAN packet to 00:00:5E:00:53:66
+- name: Send a magic Wake-on-LAN
   community.general.wakeonlan:
     mac: '00:00:5E:00:53:66'
   delegate_to: localhost
