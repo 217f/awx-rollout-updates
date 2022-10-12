@@ -8,6 +8,7 @@
   - common
 
 - hosts: all
+  gather_facts: no
   roles:
   - install-updates
   tags:
