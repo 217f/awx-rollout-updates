@@ -1,7 +1,14 @@
 ---
 # This role contains common plays that will run on all nodes.
 
-- name: Send a magic Wake-on-LAN
-  community.general.wakeonlan:
-    mac: '00:00:5E:00:53:66'
+- name: Send magic Wake-On-Lan packet to turn on individual systems
+  wakeonlan:
+    mac: '{{ mac }}'
+    broadcast: 192.168.0.255
   delegate_to: localhost
+
+- name: Wait 600 seconds for system to become reachable
+  wait_for_connection:
+
+- name: Gather facts for first time
+  setup:

@@ -4,6 +4,8 @@
 # Apply common configuration to all hosts
 - hosts: all
 
+  gather_facts: no
+
   roles:
   - common
   
