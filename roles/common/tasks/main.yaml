@@ -1,7 +1,7 @@
 ---
 # This role contains common plays that will run on all nodes.
 
-- name: Send magic Wake-On-Lan packet to turn on individual systems
+- name: Send magic Wake-On-Lan packet to {{host_mac}}
   wakeonlan:
     mac: '00:00:5E:00:53:66'
     broadcast: 192.168.0.255
