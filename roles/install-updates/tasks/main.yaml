@@ -11,6 +11,6 @@
     username: mh@example.com
     password: mysecret
     to: Markus Hosiner <mh@example.com>
-    subject: "[AWX:TPL_ROLLOUT_UPDATE] {{ansible_host}}"
+    subject: "[AWX:TPL_ROLLOUT_UPDATE] {{inventory_hostname}}"
     body: System {{ ansible_hostname }} has been successfully updated.
   delegate_to: localhost
