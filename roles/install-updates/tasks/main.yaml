@@ -6,7 +6,7 @@
 
 - name: Sending an e-mail using Gmail SMTP servers
   community.general.mail:
-    host: http://172.22.205.92:8025/
+    host: 172.22.205.92
     port: 1025
     username: mh@example.com
     password: mysecret
