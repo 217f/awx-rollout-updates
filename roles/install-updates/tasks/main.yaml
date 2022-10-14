@@ -12,5 +12,5 @@
     password: mysecret
     to: Markus Hosiner <mh@example.com>
     subject: "[AWX:TPL_ROLLOUT_UPDATE:COMPLETE] {{inventory_hostname}}"
-    body: System {{inventory_hostname}} has been successfully updated.
+    body: "System {{inventory_hostname}} has been successfully updated.\n{{ansible_facts}}"
   delegate_to: localhost 
